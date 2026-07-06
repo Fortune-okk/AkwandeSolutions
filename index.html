@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akwande Solutions | Phone Repairs & Accessories</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#catalog" aria-label="Akwande Solutions home">
+        <span class="brand-mark">AS</span>
+        <span>
+          <strong>Akwande Solutions</strong>
+          <small>Phone repairs & accessories</small>
+        </span>
+      </a>
+
+      <nav class="top-actions" aria-label="Main navigation">
+        <a href="#catalog">Prices</a>
+        <a href="#how">How it works</a>
+        <button class="icon-button" id="openBasket" type="button" aria-label="Open enquiry basket">
+          <span class="basket-icon" aria-hidden="true"></span>
+          <span id="basketCount">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="eyebrow">Fast local cellphone care</p>
+          <h1 id="heroTitle">Browse repair prices and accessories, then send one WhatsApp enquiry.</h1>
+          <p>
+            Compare common phone repair services, choose the items you need, and message Akwande Solutions with a ready-made quote request.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#catalog">Browse prices</a>
+            <button class="secondary-button" id="quickWhatsApp" type="button">WhatsApp now</button>
+          </div>
+        </div>
+
+        <div class="device-scene" aria-label="Phone repair preview">
+          <div class="phone-frame">
+            <div class="speaker"></div>
+            <div class="screen">
+              <div class="status-line"></div>
+              <div class="screen-card large"></div>
+              <div class="screen-grid">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="repair-chip">Screen repair</div>
+              <div class="repair-chip battery">Battery fitment</div>
+            </div>
+          </div>
+          <div class="tool-disk one"></div>
+          <div class="tool-disk two"></div>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalog" aria-labelledby="catalogTitle">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Price list</p>
+            <h2 id="catalogTitle">Repairs and cellphone accessories</h2>
+          </div>
+          <label class="search-box">
+            <span>Search</span>
+            <input id="searchInput" type="search" placeholder="Screen, charger, battery..." autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Filter price list">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="repairs">Repairs</button>
+          <button class="filter-button" type="button" data-filter="accessories">Accessories</button>
+          <button class="filter-button" type="button" data-filter="popular">Popular</button>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid"></div>
+        <p class="empty-state" id="emptyState">No items match your search.</p>
+      </section>
+
+      <section class="info-band" id="how" aria-labelledby="howTitle">
+        <div>
+          <p class="eyebrow">Simple process</p>
+          <h2 id="howTitle">Pick items. Send WhatsApp. Confirm the phone model.</h2>
+        </div>
+        <div class="steps">
+          <article>
+            <span>1</span>
+            <h3>Choose a service</h3>
+            <p>Select repair work or accessories from the price list.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Add details</h3>
+            <p>Your WhatsApp message includes your selected items and space for the phone model.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Confirm availability</h3>
+            <p>Akwande Solutions confirms parts, timing, and the final quote.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="basket-panel" id="basketPanel" aria-hidden="true" aria-labelledby="basketTitle">
+      <div class="basket-backdrop" id="closeBasketBackdrop"></div>
+      <div class="basket-drawer" role="dialog" aria-modal="true">
+        <div class="basket-header">
+          <div>
+            <p class="eyebrow">Your enquiry</p>
+            <h2 id="basketTitle">Selected items</h2>
+          </div>
+          <button class="close-button" id="closeBasket" type="button" aria-label="Close enquiry basket">x</button>
+        </div>
+        <div class="basket-items" id="basketItems"></div>
+        <label class="model-field">
+          <span>Phone model or accessory details</span>
+          <textarea id="customerNote" rows="4" placeholder="Example: Samsung A32 screen, black cover, iPhone charger..."></textarea>
+        </label>
+        <div class="basket-total">
+          <span>Estimated total</span>
+          <strong id="basketTotal">R0</strong>
+        </div>
+        <button class="whatsapp-button" id="sendWhatsApp" type="button">Send WhatsApp enquiry</button>
+        <p class="fine-print">Prices are estimates. Final price depends on phone model, part quality, and stock availability.</p>
+      </div>
+    </aside>
+
+    <footer>
+      <strong>Akwande Solutions</strong>
+      <span>Cellphone repairs, accessories, and quick WhatsApp support.</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
